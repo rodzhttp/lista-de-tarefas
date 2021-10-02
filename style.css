@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 60.5%;
+}
+body {
+    background: linear-gradient(to right, rgb(147, 175, 121), rgb(209, 158, 216));
+    font: bold 2rem 'Open Sans', sans-serif;
+}
+
+.to-do-list {
+    display: flex;
+    width: 60vw;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 25px;
+}
+
+.titulo {
+    display: flex;
+    background-color: #0e1e1f;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    box-shadow: 1px 1px 5px #0F0F0B;
+    font-size: 3rem;
+    color: #5dadad;
+}
+
+.to-do-listt {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 1px 1px 5px #0F0F0B;
+}
+.item > div {
+    width: 80%;
+}
+.item:hover {
+    cursor: pointer;
+    transition: all .5s ease;
+    background-color: rgba(165, 255, 47, 0.425);
+    color: var(--primary-color);
+}
+
+.item > input[type='text'] {
+    border: none;
+    width: 80%;
+    font: inherit;
+}
+
+.item > input[type='button'],
+.item > input[type='checkbox'] {
+    width: 30px;
+    height: 30px;
+    font: inherit;
+}
+
+
+.todo__item > input[type='checkbox']:checked  + div {
+    text-decoration:line-through;
+}
+
+.newitem{
+    display: flex;
+    background-color: #0e1e1f;
+    width: 100%;
+    height: 70px;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    box-shadow: 1px 1px 5px #0F0F0B;
+    margin: 10px;
+    font: inherit;
+    color: greenyellow;
+}
+
+.newitem > input{
+    background-color: #1a3133;
+    border: none;
+    width: 80%;
+    outline: none;
+    font: inherit;
+    color: greenyellow;
+    padding: 20px;
+}
+
+.newitem > input::placeholder {
+    font-size: 18px;
+    font-weight: normal;
+    color: rgba(171, 255, 45, 0.26);
+}
