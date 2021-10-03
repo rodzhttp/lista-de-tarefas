@@ -11,7 +11,7 @@ body {
     font: bold 2rem 'Open Sans', sans-serif;
 }
 
-.to-do-list {
+.todo {
     display: flex;
     width: 60vw;
     flex-direction: column;
@@ -20,7 +20,7 @@ body {
     gap: 25px;
 }
 
-.titulo {
+.todo__title {
     display: flex;
     background-color: #0e1e1f;
     width: 100%;
@@ -33,14 +33,14 @@ body {
     color: #5dadad;
 }
 
-.to-do-listt {
+.todo__list {
     display: flex;
     width: 100%;
     flex-direction: column;
     gap: 10px;
 }
 
-.item{
+.todo__item{
     display: flex;
     width: 100%;
     height: 60px;
@@ -49,24 +49,23 @@ body {
     padding: 5px;
     box-shadow: 1px 1px 5px #0F0F0B;
 }
-.item > div {
+.todo__item > div {
     width: 80%;
 }
-.item:hover {
+.todo__item:hover {
     cursor: pointer;
     transition: all .5s ease;
     background-color: rgba(165, 255, 47, 0.425);
     color: var(--primary-color);
 }
-
-.item > input[type='text'] {
+.todo__item > input[type='text'] {
     border: none;
     width: 80%;
     font: inherit;
 }
 
-.item > input[type='button'],
-.item > input[type='checkbox'] {
+.todo__item > input[type='button'],
+.todo__item > input[type='checkbox'] {
     width: 30px;
     height: 30px;
     font: inherit;
@@ -77,7 +76,7 @@ body {
     text-decoration:line-through;
 }
 
-.newitem{
+.todo__new-item{
     display: flex;
     background-color: #0e1e1f;
     width: 100%;
@@ -90,7 +89,7 @@ body {
     color: greenyellow;
 }
 
-.newitem > input{
+.todo__new-item > input{
     background-color: #1a3133;
     border: none;
     width: 80%;
@@ -100,7 +99,7 @@ body {
     padding: 20px;
 }
 
-.newitem > input::placeholder {
+.todo__new-item > input::placeholder {
     font-size: 18px;
     font-weight: normal;
     color: rgba(171, 255, 45, 0.26);
