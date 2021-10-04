@@ -1,13 +1,9 @@
 'use strict';
 
-let banco = [
-    {"tarefa":"teste", "status":"checked"},
-    {"tarefa":"teste 2", "status":"checked"},
-    {"tarefa":"teste 3", "status":""}
-]
+const getBanco = () => JSON.parse(localStorage.getItem ("todoList")) ?? [] 
+const setBanco = (banco) => localStorage.setItem ("todoList", JSON.stringify(banco))
 
-
-const criarItem = (tarefa, status="", indice) => {
+const criarItem = (tarefa, status, indice) => {
     const item = document.createElement('label')
     item.classList.add('todo__item')
     item.innerHTML = 
@@ -26,7 +22,7 @@ const limparTarefas = () => {
 
 const atualizarTela = () => {
     limparTarefas()
-
+    const banco = getBanco()
     banco.forEach ((item, indice) => criarItem(item.tarefa, item.status, indice))
 }
 
@@ -35,19 +31,25 @@ const inserirItem = (evento) => {
     const texto = evento.target.value
 
     if (tecla === "Enter") {
+        const banco = getBanco()
         banco.push ({"tarefa": texto, "status": ""})
+        setBanco(banco)
         atualizarTela()
         evento.target.value = ""
     }
 }
 
 const removerItem = (indice) => {
+    const banco = getBanco()
     banco.splice (indice, 1)
+    setBanco(banco)
     atualizarTela()
 }
 
 const atualizarItem = (indice) => {
+    const banco = getBanco()
     banco[indice].status = banco[indice].status === "" ? "checked" : ""
+    setBanco(banco)
     atualizarTela()
 }
 
