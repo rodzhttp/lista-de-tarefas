@@ -11,7 +11,7 @@ body {
     font: bold 2rem 'Open Sans', sans-serif;
 }
 
-.todo {
+.task {
     display: flex;
     width: 60vw;
     flex-direction: column;
@@ -20,7 +20,7 @@ body {
     gap: 25px;
 }
 
-.todo__title {
+.task_title {
     display: flex;
     background-color: #0e1e1f;
     width: 100%;
@@ -33,14 +33,14 @@ body {
     color: #5dadad;
 }
 
-.todo__list {
+.task_list {
     display: flex;
     width: 100%;
     flex-direction: column;
     gap: 10px;
 }
 
-.todo__item{
+.task_item{
     display: flex;
     width: 100%;
     height: 60px;
@@ -49,34 +49,34 @@ body {
     padding: 5px;
     box-shadow: 1px 1px 5px #0F0F0B;
 }
-.todo__item > div {
+.task_item > div {
     width: 80%;
 }
-.todo__item:hover {
+.task_item:hover {
     cursor: pointer;
     transition: all .5s ease;
     background-color: rgba(165, 255, 47, 0.425);
     color: var(--primary-color);
 }
-.todo__item > input[type='text'] {
+.task_item > input[type='text'] {
     border: none;
     width: 80%;
     font: inherit;
 }
 
-.todo__item > input[type='button'],
-.todo__item > input[type='checkbox'] {
+.task_item > input[type='button'],
+.task_item > input[type='checkbox'] {
     width: 30px;
     height: 30px;
     font: inherit;
 }
 
 
-.todo__item > input[type='checkbox']:checked  + div {
+.task_item > input[type='checkbox']:checked  + div {
     text-decoration:line-through;
 }
 
-.todo__new-item{
+.new_item{
     display: flex;
     background-color: #0e1e1f;
     width: 100%;
@@ -89,7 +89,7 @@ body {
     color: greenyellow;
 }
 
-.todo__new-item > input{
+.new_item > input{
     background-color: #1a3133;
     border: none;
     width: 80%;
@@ -99,7 +99,7 @@ body {
     padding: 20px;
 }
 
-.todo__new-item > input::placeholder {
+.new_item > input::placeholder {
     font-size: 18px;
     font-weight: normal;
     color: rgba(171, 255, 45, 0.26);

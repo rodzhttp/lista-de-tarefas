@@ -1,22 +1,22 @@
 'use strict';
 
-const getBanco = () => JSON.parse(localStorage.getItem ("todoList")) ?? [] 
-const setBanco = (banco) => localStorage.setItem ("todoList", JSON.stringify(banco))
+const getBanco = () => JSON.parse(localStorage.getItem ("taskList")) ?? [] 
+const setBanco = (banco) => localStorage.setItem ("taskList", JSON.stringify(banco))
 
 const criarItem = (tarefa, status, indice) => {
     const item = document.createElement('label')
-    item.classList.add('todo__item')
+    item.classList.add('task_item')
     item.innerHTML = 
     `<input type="checkbox" ${status} data-indice=${indice}>
     <div>${tarefa}</div>
     <input type="button" value="X" data-indice=${indice}>`
-    document.getElementById("todoList").appendChild(item)
+    document.getElementById("taskList").appendChild(item)
 }
 
 const limparTarefas = () => {
-    const todoList = document.getElementById("todoList")
-    while (todoList.firstChild) {
-        todoList.removeChild(todoList.lastChild)
+    const taskList = document.getElementById("taskList")
+    while (taskList.firstChild) {
+        taskList.removeChild(taskList.lastChild)
     }
 }
 
@@ -67,6 +67,6 @@ const clickItem = (evento) => {
 }
 
 document.getElementById("newItem").addEventListener("keypress", inserirItem)
-document.getElementById("todoList").addEventListener("click", clickItem)
+document.getElementById("taskList").addEventListener("click", clickItem)
 
 atualizarTela() //é chamado quando o banco é atualizado
