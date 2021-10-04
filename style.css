@@ -7,7 +7,7 @@ html {
     font-size: 70.5%;
 }
 body {
-    background: linear-gradient(to right, rgb(147, 175, 121), rgb(209, 158, 216));
+    background: linear-gradient(to right, rgb(145, 207, 197), rgb(205, 91, 209));
     font: bold 2rem 'Open Sans', sans-serif;
 }
 
@@ -30,7 +30,7 @@ body {
     margin-top: 50px;
     box-shadow: 1px 1px 5px #0F0F0B;
     font-size: 3rem;
-    color: #5dadad;
+    color: greenyellow;
 }
 
 .task_list {
@@ -92,7 +92,7 @@ body {
 .new_item > input{
     background-color: #1a3133;
     border: none;
-    width: 80%;
+    width: 65%;
     outline: none;
     font: inherit;
     color: greenyellow;
