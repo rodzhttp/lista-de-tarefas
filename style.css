@@ -13,24 +13,27 @@ body {
 
 .task {
     display: flex;
-    width: 60vw;
+    width: 80vw;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    gap: 25px;
+    gap: 30px;
+    
 }
 
 .task_title {
     display: flex;
     background-color: #0e1e1f;
     width: 100%;
-    height: 80px;
+    height: 70px;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 70px;
     box-shadow: 1px 1px 5px #0F0F0B;
     font-size: 3rem;
     color: greenyellow;
+    border-radius: 5px 22px 5px 5px;
+
 }
 
 .task_list {
@@ -38,16 +41,20 @@ body {
     width: 100%;
     flex-direction: column;
     gap: 10px;
+
 }
 
 .task_item{
     display: flex;
     width: 100%;
-    height: 60px;
+    height: 80px;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
     box-shadow: 1px 1px 5px #0F0F0B;
+    background-color: rgba(0, 0, 0, 0.082);
 }
 .task_item > div {
     width: 80%;
@@ -57,23 +64,24 @@ body {
     transition: all .5s ease;
     background-color: rgba(165, 255, 47, 0.425);
     color: var(--primary-color);
+
 }
 .task_item > input[type='text'] {
     border: none;
     width: 80%;
     font: inherit;
-}
 
+}
 .task_item > input[type='button'],
 .task_item > input[type='checkbox'] {
     width: 30px;
     height: 30px;
     font: inherit;
+
 }
-
-
 .task_item > input[type='checkbox']:checked  + div {
     text-decoration:line-through;
+
 }
 
 .new_item{
@@ -82,13 +90,14 @@ body {
     width: 100%;
     height: 70px;
     justify-content: space-evenly;
-    padding: 10px 0;
+    padding: 15px 0;
     box-shadow: 1px 1px 5px #0F0F0B;
     margin: 10px;
     font: inherit;
     color: greenyellow;
-}
+    border-radius: 5px 5px 5px 22px;
 
+}
 .new_item > input{
     background-color: #1a3133;
     border: none;
@@ -97,10 +106,12 @@ body {
     font: inherit;
     color: greenyellow;
     padding: 20px;
-}
+    border-radius: 3px 3px 3px 13px;
 
+}
 .new_item > input::placeholder {
     font-size: 18px;
     font-weight: normal;
     color: rgba(171, 255, 45, 0.26);
+
 }
