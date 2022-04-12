@@ -7,8 +7,13 @@ html {
     font-size: 70.5%;
 }
 body {
-    background: linear-gradient(to right, rgb(145, 207, 197), rgb(205, 91, 209));
+    background-image: url("../src/fundo.png");
     font: bold 2rem 'Open Sans', sans-serif;
+    
+    background-color: #006a9b; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-size: cover; /* Redimencionando pra cobrir todo container */
+    background-attachment: fixed; /* Fixando a imagem (pra não mover com o scroll */
 }
 
 .task {
@@ -23,7 +28,7 @@ body {
 
 .task_title {
     display: flex;
-    background-color: #0e1e1f;
+    background-color: rgb(4, 14, 12);
     width: 100%;
     height: 70px;
     justify-content: center;
@@ -54,7 +59,7 @@ body {
     margin-top: 15px;
     margin-bottom: 10px;
     box-shadow: 1px 1px 5px #0F0F0B;
-    background-color: rgba(0, 0, 0, 0.082);
+    background-color: rgba(0, 255, 170, 0.13)
 }
 .task_item > div {
     width: 80%;
@@ -86,7 +91,7 @@ body {
 
 .new_item{
     display: flex;
-    background-color: #0e1e1f;
+    background-color: rgb(4, 14, 12);
     width: 100%;
     height: 70px;
     justify-content: space-evenly;
